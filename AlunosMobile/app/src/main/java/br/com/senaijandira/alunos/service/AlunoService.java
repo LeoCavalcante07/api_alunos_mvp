@@ -17,7 +17,7 @@ public interface AlunoService {
     @GET("/alunos")
     Call<List<Aluno>> obterAlunos();
 
-    @GET("/alunos/{id}")
+    @GET("/aluno/{id}")
     Call<Aluno> obterAlunoPorId(@Path("id") int id);
 
     @POST("/novo")

@@ -20,7 +20,7 @@ public class MainPresenter {
     MainView mainView;
     AlunoService service;
 
-    public MainPresenter(MainView mainView,AlunoService service){
+    public MainPresenter(MainView mainView, AlunoService service){
         this.mainView = mainView;
         this.service = service;
     }

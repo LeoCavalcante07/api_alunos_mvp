@@ -33,6 +33,12 @@ let idAluno = 2
 app.get("/alunos", (req,res)=> res.send(alunos))
 
 
+app.get("/aluno/:id", (req, res)=> {
+	const aluno = alunos.filter(alunos => alunos.id == req.params.id)
+	res.send(aluno[0])
+})
+
+
 app.post("/novo", (req, res)=> {
   
     idAluno ++
