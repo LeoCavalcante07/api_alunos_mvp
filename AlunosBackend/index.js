@@ -39,6 +39,14 @@ app.get("/aluno/:id", (req, res)=> {
 })
 
 
+
+
+app.get("/aluno/deletar/:id", (req, res)=> {
+	const aluno = alunos.filter(alunos => alunos.id != req.params.id)
+	res.send(aluno)
+});
+
+
 app.post("/novo", (req, res)=> {
   
     idAluno ++

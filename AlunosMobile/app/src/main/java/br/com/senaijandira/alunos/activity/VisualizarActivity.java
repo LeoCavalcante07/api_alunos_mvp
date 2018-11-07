@@ -2,7 +2,6 @@ package br.com.senaijandira.alunos.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,8 +48,7 @@ public class VisualizarActivity extends AppCompatActivity implements VisualizarV
 
         presenter.carregarDadosAluno(idAluno);
 
-
-
+        
     }
 
     @Override
@@ -61,7 +59,7 @@ public class VisualizarActivity extends AppCompatActivity implements VisualizarV
         edNome.setText(((aluno.getNome())));
         edMatricula.setText((String.valueOf(aluno.getMatricula())));
         edCpf.setText((String.valueOf(aluno.getDataNascimento())));
-        //edDtNasc.setText((aluno.getDataNascimento()));
+        edDtNasc.setText((String.valueOf(aluno.getDataNascimento())));
 
     }
 
@@ -69,6 +67,7 @@ public class VisualizarActivity extends AppCompatActivity implements VisualizarV
         edNome.setEnabled(true);
         edMatricula.setEnabled(true);
         edCpf.setEnabled(true);
+        edDtNasc.setEnabled(true);
         btnEditar.setEnabled(true);
 
     }
